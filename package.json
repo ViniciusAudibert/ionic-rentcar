@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "topcar",
+  "author": "Vinicius Audibert",
+  "homepage": "https://www.linkedin.com/in/vin%C3%ADcius-audibert-b9502810a/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -39,5 +39,5 @@
     "cordova-plugin-splashscreen"
   ],
   "cordovaPlatforms": [],
-  "description": "Topcar: An Ionic project"
+  "description": "Freelance app developed in ionic for a vehicle resale called TopCar"
 }
