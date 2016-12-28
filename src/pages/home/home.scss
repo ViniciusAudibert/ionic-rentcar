@@ -1,3 +1,46 @@
 page-home {
-
+    .home-title {
+        text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #7b7b7b;
+    }
+  .fab-md-in-list {
+    font-size: 25px;
+  }
+  .card-content-md {
+      padding-top: 6px;
+  }
+  .car-price {
+    position: absolute;
+    bottom: 18px;
+    color: #FFFFFF;
+    z-index: 3;
+    font-size: 13px;
+    left: 10px;
+  }
+  .car-price-background {
+    height: 35px;
+    position: absolute;
+    background-color: #000000;
+    width: 170px;
+    bottom: 15px;
+    opacity: 0.6;
+    z-index: 2;
+  }
+  .pricing {
+    font-weight: 900;
+    font-size: 20px;
+    position: relative;
+    bottom: -2px;
+  }
+  .share-car {
+    position: relative;
+    top: -4px;
+    float: right;
+    right: 41px;
+  }
+  .card {
+      background-color: #FFFFFF;
+  }
 }
