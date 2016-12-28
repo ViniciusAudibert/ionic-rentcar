@@ -11,7 +11,7 @@
   <ion-card *ngFor="let car of carros">
     <ion-slides>
       <ion-slide *ngFor="let image of car.images">
-        <img [src]="image" />
+        <img [src]="'assets/images/' + image" />
         <p class="car-price">R$ <span class="pricing">{{car.price}}</span></p>
         <div class="car-price-background"></div>
       </ion-slide>
