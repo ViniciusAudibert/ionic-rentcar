@@ -1,40 +1,11 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Topcar</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content no-padding>
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Ex. Cobalt LTZ"></ion-searchbar>
-
-  <div class="home-title">Ultimos lançamentos</div>
-
-  <ion-card *ngFor="let car of carros">
-    <ion-slides>
-      <ion-slide *ngFor="let image of car.images">
-        <img [src]="'assets/images/' + image" />
-        <p class="car-price">R$ <span class="pricing">{{car.price}}</span></p>
-        <div class="car-price-background"></div>
-      </ion-slide>
-    </ion-slides>
-
-    <ion-card-content>
-
-        <div class="share-car">
-          <ion-fab>
-            <button color="share-btn" ion-fab mini><i class="fa fa-share" aria-hidden="true"></i></button>
-            <ion-fab-list side="top">
-              <button ion-fab><i class="fa fa-facebook-official" aria-hidden="true" color="facebook" item-left></i></button>
-              <button ion-fab><i class="fa fa-whatsapp" aria-hidden="true" color="whatsapp" item-left></i></button>
-              <button ion-fab><i class="fa fa-envelope" aria-hidden="true" color="google-plus" item-left></i></button>
-            </ion-fab-list>
-          </ion-fab>
-        </div>
-
-      <ion-card-title>
-        {{car.make}} {{car.model}}
-      </ion-card-title>
-      <p>Versão {{car.version}} {{car.engine}}<br>{{car.year}}</p>
-
-    </ion-card-content>
-  </ion-card>
 </ion-content>
