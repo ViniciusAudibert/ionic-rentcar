@@ -24,19 +24,20 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary: #D16014,
-  secondary: #E8E9EB,
-  secondary-disabled: #DBDCDD,
+  primary: #E37D00,
   danger: #f53d3d,
   light: #E8E9EB,
-  dark: #313638,
+  dark: #424242,
+  dark-active: #2f2f2f,
   whatsapp: #25d366,
   facebook: #3b5998,
   google-plus: #dd4b39,
-  share-btn: #15478e
+  share-btn: #15478e,
+  white: #FFFFFF
 );
 
 $background-color: #FCFCFC;
+$menu-md-background: #8A0303;
 
 // App iOS Variables
 // --------------------------------------------------

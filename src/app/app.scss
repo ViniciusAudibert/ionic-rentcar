@@ -1,27 +1,50 @@
-// http://ionicframework.com/docs/v2/theming/
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
 .toolbar-background {
   background-color: color($colors, primary);
 }
 
 .toolbar-title {
-  text-align: center;
   color: #FFFFFF;
 }
 
-;
-.navigation-tabs {
-  background-color: color($colors, primary);
+.item-md {
+  font-size: 18px;
+  color: #ececec;
+  background-color: color($colors, dark);
+  box-shadow: 0px 0px 1px 0px #6b6b6b;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.item-md.activated {
+  background-color: color($colors, dark-active);
+  color: #FFFFFF;
+}
+
+.item-md-active {
+  border-left: 14px color($colors, primary) solid !important;
+  padding-left: 6px;
+  background-color: color($colors, dark-active);
+}
+
+.item-header-not-logged {
+  margin: 0;
+  padding: 6px 10px;
+}
+
+.item-header-not-logged>ion-icon {
+  font-size: 70px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.item-header-not-logged>.item-inner {
+  margin: 0 0 0 8px !important;
+}
+
+.bar-button-default-md {
+  color: #FFFFFF;
+}
+
+.menu-content {
+  background-color: color($colors, dark);
 }

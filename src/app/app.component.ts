@@ -17,18 +17,20 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{ title: string, component: any }>;
+  activePage: string = this.rootPage.name;
+
+  pages: Array<{ title: string, component: any, icon: string }>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Inicio', component: HomePage },
-      { title: 'Novidades', component: NewsPage },
-      { title: 'Catálogo', component: VehiclesPage },
-      { title: 'Favoritos', component: FavouritePage },
-      { title: 'Serviços', component: ServicesPage },
-      { title: 'Contato', component: ContactPage }
+      { title: 'Inicio', component: HomePage, icon: 'home' },
+      { title: 'Novidades', component: NewsPage, icon: 'information-circle' },
+      { title: 'Catálogo', component: VehiclesPage, icon: 'clipboard' },
+      { title: 'Favoritos', component: FavouritePage, icon: 'star' },
+      { title: 'Serviços', component: ServicesPage, icon: 'cog' },
+      { title: 'Contato', component: ContactPage, icon: 'contacts' }
     ];
 
   }
@@ -42,5 +44,6 @@ export class MyApp {
 
   openPage(page) {
     this.nav.setRoot(page.component);
+    this.activePage = page.component.name;
   }
 }
