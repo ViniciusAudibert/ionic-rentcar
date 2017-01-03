@@ -11,6 +11,11 @@ var paths = {
   sass: ['./scss/**/*.scss']
 };
 
+gulp.task('resources', function() {
+  gulp.src(["resources/**", "!resources/*.png"])
+      .pipe(gulp.dest('platforms/android/resources/'));
+});
+
 gulp.task('default', ['sass']);
 
 gulp.task('sass', function(done) {
