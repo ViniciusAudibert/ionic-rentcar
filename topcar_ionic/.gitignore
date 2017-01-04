@@ -1,5 +1,4 @@
 node_modules
-www
 .tmp
 .sass-cache
 coverage
@@ -9,4 +8,4 @@ plugins
 *.swo
 *.log
 *.DS_Store
-res/**
+res
