@@ -6,14 +6,21 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var del = require('del');
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('resources', function() {
+gulp.task('resources', ['deleteResources'], function() {
   gulp.src(["resources/**", "!resources/*.png"])
-      .pipe(gulp.dest('platforms/android/resources/'));
+      .pipe(gulp.dest('res'));
+});
+
+gulp.task('deleteResources', function() {
+  del(['res']).then(paths => {
+    console.log('Deleted files and folders:\n', paths.join('\n'));
+});
 });
 
 gulp.task('default', ['sass']);
