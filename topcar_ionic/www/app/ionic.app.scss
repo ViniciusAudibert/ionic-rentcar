@@ -1,0 +1,16 @@
+$light:                           #ffffff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #E37D00 !default;
+$share-btn:                       #15478e !default;
+$google-plus:                     #dd4b39 !default;
+$facebook:                        #3b5998 !default;
+$whatsapp:                        #25d366 !default;
+$dark:                            #424242 !default;
+$background-color:                #FCFCFC !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
