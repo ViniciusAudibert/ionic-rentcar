@@ -60,4 +60,7 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
-});
+})
+
+gulp.task('serve:before', ['default']);
+;

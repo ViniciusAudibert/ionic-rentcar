@@ -1,13 +1,15 @@
 {
-  "name": "topcar",
-  "app_id": "",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*",
-    "!www/**/*.map"
+"name": "topcar",
+"app_id": "",
+"v2": false,
+"typescript": false,
+"watch": {
+  "sass": ["./www/app/*.scss","./www/templates/pages/**/*.scss","./www/templates/partials/**/*.scss"],
+  "html": ["www/**/*.html","./www/templates/pages/**/*.html","./www/templates/partials/**/*.html"],
+  "livereload": [
+  "www/**/*.html",
+  "www/**/*.js",
+  "www/**/*.css"
   ]
+} 
 }
