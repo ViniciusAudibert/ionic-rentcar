@@ -9,7 +9,7 @@ var sh = require('shelljs');
 var del = require('del');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./www/app/*.scss','./www/templates/pages/**/*.scss','./www/templates/partials/**/*.scss']
 };
 
 gulp.task('resources', ['deleteResources'], function() {
@@ -23,18 +23,18 @@ gulp.task('deleteResources', function() {
 });
 });
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['watch']);
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+  gulp.src(paths.sass)
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(gulp.dest('./www/css'))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(gulp.dest('./www/css'))
     .on('end', done);
 });
 
