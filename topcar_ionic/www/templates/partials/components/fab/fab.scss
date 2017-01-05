@@ -1,0 +1,68 @@
+$fabMargin: 7px;
+$shareSize: 40px;
+.fab {
+  position: relative;
+  display: inline-block;
+  .fab-button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+    width: 50px;
+    height: 50px;
+    &:hover {
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+  }
+  .fab-button {
+    @extend .fab-button;
+  }
+  .share-button {
+    @extend .fab-button;
+    opacity: 1;
+    margin-bottom: -$shareSize;
+    height: $shareSize;
+    width: $shareSize;
+    animation-name: fabButtonSlideDown;
+    animation-duration: 1s;
+  }
+  .fab-open {
+    animation: fabButtonSlideUp 1.0s forwards;
+  }
+  .fab-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    bottom: 100%;
+    left: 5px;
+  }
+  @keyframes fabButtonSlideDown {
+    80% {
+      opacity: 0;
+    }
+    100% {
+      margin-bottom: -40px;
+    }
+  }
+  @keyframes fabButtonSlideUp {
+    80% {
+      opacity: 1;
+    }
+    100% {
+      margin-bottom: $fabMargin;
+    }
+  }
+  //each fab button
+  .fa-facebook-official {
+    color: blue;
+  }
+  .fa-whatsapp {
+    color: blue;
+  }
+  .fa-envelope {
+    color: blue;
+  }
+}

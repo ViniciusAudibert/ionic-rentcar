@@ -1,6 +1,6 @@
 <ion-view view-title="Catálogo">
 
-  <ion-content>
+  <ion-content id="catalog-page">
 
     <div class="list card" ng-repeat="vehicle in vehicles">
 
@@ -12,22 +12,7 @@
           </ion-slide>
         </ion-slide-box>
 
-        <!--div class="share-car">
-          <button>
-            <i class="fa fa-share" aria-hidden="true"></i>
-            </button>
-          <div>
-            <button>
-              <i class="fa fa-facebook-official" aria-hidden="true"></i>
-              </button>
-            <button>
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              </button>
-            <button>
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              </button>
-          </div>
-        </div-->
+        <ng-fab></ng-fab>
 
         <div class="item-body">
           <h1>
@@ -39,7 +24,6 @@
 
         </div>
       </div>
-    </div>
     </div>
 
   </ion-content>

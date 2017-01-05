@@ -1,5 +1,5 @@
 angular.module('topcar', [
-  'ionic', 
+  'ionic',
   'app',
   'home',
   'catalog',
@@ -8,10 +8,10 @@ angular.module('topcar', [
   'login',
   'news',
   'services'
-  ])
+])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+.run(function ($ionicPlatform) {
+  $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -25,7 +25,7 @@ angular.module('topcar', [
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -40,7 +40,7 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/home/home.html',
-          controller: 'homeController'
+        controller: 'homeController'
       }
     }
   })
@@ -50,7 +50,7 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/catalog/catalog.html',
-          controller: 'catalogController'
+        controller: 'catalogController'
       }
     }
   })
@@ -60,7 +60,7 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/contact/contact.html',
-          controller: 'contactController'
+        controller: 'contactController'
       }
     }
   })
@@ -70,7 +70,7 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/favorites/favorites.html',
-          controller: 'favoritesController'
+        controller: 'favoritesController'
       }
     }
   })
@@ -80,7 +80,7 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/news/news.html',
-          controller: 'newsController'
+        controller: 'newsController'
       }
     }
   })
@@ -90,9 +90,16 @@ angular.module('topcar', [
     views: {
       'menuContent': {
         templateUrl: 'templates/pages/services/services.html',
-          controller: 'servicesController'
+        controller: 'servicesController'
       }
     }
   });
   $urlRouterProvider.otherwise('/app/home');
+})
+
+.directive('ngFab', function () {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/partials/components/fab/fab.html'
+  };
 });
