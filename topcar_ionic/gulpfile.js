@@ -9,7 +9,7 @@ var sh = require('shelljs');
 var del = require('del');
 
 var paths = {
-  sass: ['./www/app/*.scss','./www/templates/pages/**/*.scss','./www/templates/partials/**/*.scss']
+  sass: ['./www/app/*.scss','./www/templates/pages/**/**.scss','./www/templates/partials/**/*.scss']
 };
 
 gulp.task('resources', ['deleteResources'], function() {
@@ -23,13 +23,13 @@ gulp.task('deleteResources', function() {
 });
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['sass', 'watch']);
 
 gulp.task('sass', function(done) {
   gulp.src(paths.sass)
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(gulp.dest('./www/css'))
+    .pipe(concat('style.css'))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
@@ -60,7 +60,6 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
-})
+});
 
 gulp.task('serve:before', ['default']);
-;
