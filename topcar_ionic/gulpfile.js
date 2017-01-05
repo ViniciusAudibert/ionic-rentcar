@@ -9,7 +9,13 @@ var sh = require('shelljs');
 var del = require('del');
 
 var paths = {
-  sass: ['./www/app/*.scss','./www/templates/pages/**/**.scss','./www/templates/partials/**/*.scss']
+  sass: [
+    './www/app/*.scss',
+    './www/templates/pages/**/**.scss',
+    './www/templates/partials/**/*.scss',
+    './www/templates/partials/components/**/*.scss',
+    './www/fonts/scss/font-awesome.scss'
+    ]
 };
 
 gulp.task('resources', ['deleteResources'], function() {

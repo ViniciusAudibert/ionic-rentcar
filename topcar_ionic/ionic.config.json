@@ -4,8 +4,8 @@
 "v2": false,
 "typescript": false,
 "watch": {
-  "sass": ["./www/app/*.scss","./www/templates/pages/**/*.scss","./www/templates/partials/**/*.scss"],
-  "html": ["www/**/*.html","./www/templates/pages/**/*.html","./www/templates/partials/**/*.html"],
+  "sass": ["./www/app/*.scss","./www/templates/pages/**/*.scss","./www/templates/partials/**/*.scss","./www/templates/partials/components/**/*.scss"],
+  "html": ["www/**/*.html","./www/templates/pages/**/*.html","./www/templates/partials/**/*.html","./www/templates/partials/components/**/*.html"],
   "livereload": [
   "www/**/*.html",
   "www/**/*.js",
