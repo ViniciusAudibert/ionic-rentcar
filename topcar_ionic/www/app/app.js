@@ -100,6 +100,31 @@ angular.module('topcar', [
 .directive('ngFab', function () {
   return {
     restrict: 'E',
+    scope: {
+      index: '=',
+      element: '='
+    },
+    controller: function($scope, $element) {     
+      //var carIndex = $scope.index;
+      
+      let fabButtons = function(isToggle) {
+        let buttons = $element[0].children[0].children[1].children;
+        let classProp = isToggle ? 'toggle' : 'remove';
+
+        for(let i = 0; i <  buttons.length; i++) {
+          let button = buttons[i];
+          button.classList[classProp]('fab-open');
+        }
+      }
+
+      $scope.fabToogleOpen = function() {
+        fabButtons(true);
+      }
+
+      $scope.fabClose = function() {
+        fabButtons();
+      }
+    },
     templateUrl: 'templates/partials/components/fab/fab.html'
   };
 });

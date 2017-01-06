@@ -1,5 +1,6 @@
 $fabMargin: 7px;
 $shareSize: 40px;
+$fabAnimationTime: .50s;
 .fab {
   position: relative;
   display: inline-block;
@@ -16,20 +17,28 @@ $shareSize: 40px;
       box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
     }
   }
-  .fab-button {
+  .fab-opener {
     @extend .fab-button;
+    position: relative;
+    z-index: 10;
   }
   .share-button {
     @extend .fab-button;
     opacity: 1;
+    transition: opacity $fabAnimationTime ease-in-out;
+   -moz-transition: opacity $fabAnimationTime ease-in-out;
+   -webkit-transition: opacity $fabAnimationTime ease-in-out;
+    transition: margin-bottom $fabAnimationTime ease-in-out;
+   -moz-transition: margin-bottom $fabAnimationTime ease-in-out;
+   -webkit-transition: margin-bottom $fabAnimationTime ease-in-out;
+    
     margin-bottom: -$shareSize;
     height: $shareSize;
     width: $shareSize;
-    animation-name: fabButtonSlideDown;
-    animation-duration: 1s;
   }
   .fab-open {
-    animation: fabButtonSlideUp 1.0s forwards;
+    opacity: 1;
+    margin-bottom: $fabMargin;
   }
   .fab-list {
     display: flex;
@@ -44,7 +53,7 @@ $shareSize: 40px;
       opacity: 0;
     }
     100% {
-      margin-bottom: -40px;
+      margin-bottom: -$shareSize;
     }
   }
   @keyframes fabButtonSlideUp {
