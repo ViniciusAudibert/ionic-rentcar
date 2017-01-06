@@ -5,6 +5,7 @@ $fabAnimationTime: .50s;
   position: relative;
   display: inline-block;
   .fab-button {
+    position: relative;
     border-radius: 50%;
     background-color: #ffffff;
     border: none;
@@ -13,25 +14,22 @@ $fabAnimationTime: .50s;
     box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);
     width: 50px;
     height: 50px;
-    &:hover {
+    transition: color 0.7s;
+    &.activated {
       box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-    }
+    };
   }
   .fab-opener {
     @extend .fab-button;
-    position: relative;
     z-index: 10;
+    color: #ffffff;
+    background-color: #BF153D;
   }
   .share-button {
     @extend .fab-button;
     opacity: 1;
     transition: opacity $fabAnimationTime ease-in-out;
-   -moz-transition: opacity $fabAnimationTime ease-in-out;
-   -webkit-transition: opacity $fabAnimationTime ease-in-out;
-    transition: margin-bottom $fabAnimationTime ease-in-out;
-   -moz-transition: margin-bottom $fabAnimationTime ease-in-out;
-   -webkit-transition: margin-bottom $fabAnimationTime ease-in-out;
-    
+    transition: margin-bottom $fabAnimationTime ease-in-out;    
     margin-bottom: -$shareSize;
     height: $shareSize;
     width: $shareSize;
@@ -48,6 +46,18 @@ $fabAnimationTime: .50s;
     bottom: 100%;
     left: 5px;
   }
+  .facebook {
+    background-color: $facebook;
+    color: #fff;
+  }
+  .whatsapp {
+    background-color: $whatsapp;
+    color: #fff;
+  }
+  .google-plus {
+    background-color: $google-plus;
+    color: #fff;
+  }
   @keyframes fabButtonSlideDown {
     80% {
       opacity: 0;
@@ -63,15 +73,5 @@ $fabAnimationTime: .50s;
     100% {
       margin-bottom: $fabMargin;
     }
-  }
-  //each fab button
-  .fa-facebook-official {
-    color: blue;
-  }
-  .fa-whatsapp {
-    color: blue;
-  }
-  .fa-envelope {
-    color: blue;
   }
 }

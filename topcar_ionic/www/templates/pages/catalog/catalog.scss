@@ -6,9 +6,12 @@
   .item-body {
     padding: 0px 0px 0px 15px;
   }
+  .slider-vehicle {
+    position: relative;
+  }
   ng-fab {
     position: absolute;
-    top: 145px;
+    bottom: -20px;
     right: 5px;
   }
 }
