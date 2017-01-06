@@ -4,15 +4,17 @@
 
     <div class="list card" ng-repeat="vehicle in vehicles">
 
-      <div class="">
+      <div>
 
+      <div class="slider-vehicle">
         <ion-slide-box show-pager="false">
           <ion-slide ng-repeat="image in vehicle.images">
-            <img ng-src="images/{{image}}" class="slide-image">
+            <img ng-src="assets/images/{{image}}" class="slide-image">
           </ion-slide>
         </ion-slide-box>
-
         <ng-fab index="$index" element="this"></ng-fab>
+      </div>
+
 
         <div class="item-body">
           <h1>
@@ -21,8 +23,8 @@
           <p>
             Versão {{vehicle.version}} {{vehicle.engine}}<br> {{vehicle.year}}
           </p>
-
         </div>
+
       </div>
     </div>
 

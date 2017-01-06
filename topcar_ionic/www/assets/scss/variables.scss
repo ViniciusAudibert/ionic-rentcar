@@ -7,10 +7,3 @@ $facebook:                        #3b5998 !default;
 $whatsapp:                        #25d366 !default;
 $dark:                            #424242 !default;
 $background-color:                #FCFCFC !default;
-
-// The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
-

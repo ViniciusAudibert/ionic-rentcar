@@ -10,11 +10,11 @@ var del = require('del');
 
 var paths = {
   sass: [
+    './www/assets/scss/*.scss',
     './www/app/*.scss',
     './www/templates/pages/**/**.scss',
     './www/templates/partials/**/*.scss',
-    './www/templates/partials/components/**/*.scss',
-    './www/fonts/scss/font-awesome.scss'
+    './www/templates/partials/components/**/*.scss'
     ]
 };
 
@@ -29,10 +29,16 @@ gulp.task('deleteResources', function() {
 });
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['concat-sass', 'sass', 'watch']);
 
-gulp.task('sass', function(done) {
+gulp.task('concat-sass', function() {
   gulp.src(paths.sass)
+    .pipe(concat('sass-temp.scss'))
+    .pipe(gulp.dest('./www/temp'))
+});
+
+gulp.task('sass', ['concat-sass'], function(done) {
+  gulp.src(['./www/temp/sass-temp.scss'])
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(concat('style.css'))
@@ -40,11 +46,11 @@ gulp.task('sass', function(done) {
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/css'))
+    .pipe(gulp.dest('./www/temp'))
     .on('end', done);
 });
 
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['concat-sass', 'sass'], function() {
   gulp.watch(paths.sass, ['sass']);
 });
 
@@ -68,4 +74,4 @@ gulp.task('git-check', function(done) {
   done();
 });
 
-gulp.task('serve:before', ['default']);
+gulp.task('serve:before', ['concat-sass', 'sass', 'watch']);
