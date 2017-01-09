@@ -1,6 +1,23 @@
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "./www/lib/ionic/scss/ionic";
 @import "./www/fonts/scss/font-awesome.scss";
+
+.bar-header {
+  height: $header-size;
+}
+
+.has-header {
+  top: $header-size;
+}
+
+.bar-header .title {
+  font-size: 24px !important;
+  height: 100% !important;
+  line-height: $header-size !important;
+}
+
+.left-buttons {
+  margin: auto;
+}
