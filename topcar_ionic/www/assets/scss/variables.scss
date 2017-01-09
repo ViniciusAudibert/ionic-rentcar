@@ -1,9 +1,15 @@
-$light:                           #ffffff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #E37D00 !default;
-$share-btn:                       #15478e !default;
-$google-plus:                     #dd4b39 !default;
-$facebook:                        #3b5998 !default;
-$whatsapp:                        #25d366 !default;
-$dark:                            #424242 !default;
-$background-color:                #FCFCFC !default;
+// #App Theme
+$light:                           #ffffff;
+$stable:                          #f8f8f8;
+$positive:                        #E37D00;
+$dark:                            #424242;
+
+// #Social Colors
+$google-plus:                     #dd4b39;
+$facebook:                        #3b5998;
+$whatsapp:                        #25d366;
+
+// #App Settings
+$header-size:                       60px;
+$share-btn:                       #15478e;
+$background-color:                #FCFCFC;
