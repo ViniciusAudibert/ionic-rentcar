@@ -1,6 +1,9 @@
 #home-page {
   background: url("/assets/images/home-background.jpg") no-repeat left center fixed;
   background-size: cover;
+  .scroll {
+      height: 100%;
+  }
   #navigation-tab {
     position: absolute;
     left: 0;
