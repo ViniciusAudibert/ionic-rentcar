@@ -1,0 +1,40 @@
+#home-page {
+  background: url("/assets/images/home-background.jpg") no-repeat left center fixed;
+  background-size: cover;
+  .scroll {
+      height: 100%;
+  }
+  #navigation-tab {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    ul {
+      margin: 0 10px;
+      border-radius: 30px;
+      padding: 10px;
+      background-color: #540000;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      @media screen and (max-width: 380px) {
+        padding: 10px 3px;
+        margin: 0 5px;
+      }
+      li>a {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  }
+  #search-bar {
+    position: relative;
+    top: 10px;
+    .list-inset {
+      margin: 0 10px;
+    }
+  }
+}
