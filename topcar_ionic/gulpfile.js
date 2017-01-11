@@ -29,7 +29,7 @@ gulp.task('deleteResources', function() {
 });
 });
 
-gulp.task('default', ['concat-sass', 'sass', 'watch']);
+gulp.task('default', ['concat-sass', 'sass']);
 
 gulp.task('concat-sass', function() {
   gulp.src(paths.sass)
