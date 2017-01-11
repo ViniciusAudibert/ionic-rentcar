@@ -10,3 +10,4 @@ plugins
 *.DS_Store
 res
 www/temp
+.vscode
