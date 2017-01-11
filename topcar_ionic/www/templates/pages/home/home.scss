@@ -1,9 +1,6 @@
 #home-page {
-  background: url("/assets/images/home-background.jpg") no-repeat left center fixed;
+  background: url("../assets/images/home-background.jpg") no-repeat left center fixed;
   background-size: cover;
-  .scroll {
-      height: 100%;
-  }
   #navigation-tab {
     position: absolute;
     left: 0;
@@ -11,14 +8,15 @@
     bottom: 15px;
     ul {
       margin: 0 10px;
-      border-radius: 30px;
-      padding: 10px;
-      background-color: #540000;
+      border-radius: 6px;
+      padding: 13px;
+      background-color: #3a3a3a;
       display: flex;
       justify-content: space-around;
       flex-direction: row;
       @media screen and (max-width: 380px) {
-        padding: 10px 3px;
+        padding-left: 3px;
+        padding-right: 3px;
         margin: 0 5px;
       }
       li>a {
