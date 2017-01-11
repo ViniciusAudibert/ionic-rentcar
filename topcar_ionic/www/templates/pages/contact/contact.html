@@ -1,5 +1,11 @@
 <ion-view view-title="Contato">
-  <ion-content>
-    <h1>Contato</h1>
+  <ion-content id="contact-page">
+    <div ng-if="showMap" id="map-contact-online"></div>
+    <div ng-if="!showMap" id="offline-contact-map"><p ng-click="refreshPage()">Mapa Offline</p></div>
+    <div id="contact-info">
+      <h2>Topacar RS</h2>
+      <p>Av. Vinte e Cinco de Setembro, 710 - Triângulo<br>Carlos Barbosa - RS, 95185-000</p>
+      <p><b>Telefone: </b>(54) 3461-6128</p>
+    </div>
   </ion-content>
 </ion-view>
